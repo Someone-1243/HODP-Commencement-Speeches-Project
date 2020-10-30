@@ -13,7 +13,7 @@ subscription_key = ""
 endpoint = ""
 sentiment_url = endpoint + "/text/analytics/v3.0/sentiment"
 
-for year in range(2006, 2007):
+for year in range(2004, 2005):
     speech_filename = speech_file + str(year) + txt_end
     export_file = file_start + str(year) + file_end
 
@@ -53,4 +53,4 @@ for year in range(2006, 2007):
                 for i in range(len(doc['sentences'])):
                     li.append(doc['sentences'][i]['text'])
                 writer.writerow(li)
-        f.close()
+    f.close()

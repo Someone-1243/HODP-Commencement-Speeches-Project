@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Sentiment",
+    "\\Sentiment\\Wiki"
   ],
-  "SelectedNode": "\\Sentiment",
+  "SelectedNode": "\\Sentiment\\sentiment_analysis.py",
   "PreviewInSolutionExplorer": false
 }
