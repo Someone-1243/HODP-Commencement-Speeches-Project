@@ -2,11 +2,7 @@
 
 server <- function(input, output) {
     
-    ########## FIRST PAGE: OVERVIEW ##########
-    
-    ########## SECOND PAGE: ANALYSIS ##########
-    
-    ########## THIRD PAGE: ABOUT ##########
+    ########## FOURTH PAGE: ABOUT ##########
     
     output$katherine <- renderImage({
         list(src = "www/katherine.png", 
@@ -15,19 +11,19 @@ server <- function(input, output) {
     }, deleteFile = FALSE)
     
     output$justin <- renderImage({
-        list(src = "www/person.png",
+        list(src = "www/person.png", # TODO: replace with headshot
              width = 300, 
              height = 400)
     }, deleteFile = FALSE)
     
     output$cindy <- renderImage({
-        list(src = "www/person.png",
+        list(src = "www/person.png", # TODO: replace with headshot
              width = 300, 
              height = 400)
     }, deleteFile = FALSE)
     
     output$jacinta <- renderImage({
-        list(src = "www/person.png",
+        list(src = "www/person.png", # TODO: replace with headshot
              width = 300, 
              height = 400)
     }, deleteFile = FALSE)

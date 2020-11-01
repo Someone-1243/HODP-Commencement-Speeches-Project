@@ -26,10 +26,10 @@ ui <- navbarPage(
                                                align = "center"),
                                             br(),
                                             br(),
-                                            h3(tags$b("Introduction")),
+                                            h3(tags$b("Introduction & Question")),
                                             p("Every year, Harvard hosts a notable speaker to deliver a commencement speech as part of the graduation ceremony. In the last twenty years, icons from Bill Gates to Oprah Winfrey have spoken to the graduating students and have covered a variety of topics to jumpstart the class’ post-academic, “real world” lives. Our group sought to understand what, if any, correlation existed between these speakers’ words and the situation in the world at large: what is the final call to action, final image of what a Harvard student should be like and how does this change as the world changes?  An understanding of these ideas reflects not only which global topics are the most salient and pressing, but our responsibilities as students to act on them."),
                                             br(),
-                                            h3(tags$b("Data")),
+                                            h3(tags$b("Data & Methods")),
                                             p("Data was collected from commencement speech transcripts from 2000 - 2020, with the exclusion of 2001, 2003, and 2006, for which no accurate transcripts could be found. This was then quantified and analyzed using Text Analytics from Microsoft Azure. The data on speeches was compared to web-based search data, namely from Google Trends and",
                                               a("Wikipedia’s Timeline of the 21st Century",
                                                 href = "https://en.wikipedia.org/wiki/Timeline_of_the_21st_century#2001"),
@@ -39,9 +39,9 @@ ui <- navbarPage(
              )
     ),
     
-    ########## SECOND PAGE: ANALYSIS ##########
+    ########## SECOND PAGE: INSIGHTS ##########
     
-    tabPanel("Analysis",
+    tabPanel("Insights",
              fluidPage(
                  br(),
                  br(),
@@ -58,7 +58,7 @@ ui <- navbarPage(
                                             # image
                                             p("There appears to be a slight negative correlation between the negativity of the speech and of the year. Speculatively, this may allude to a perceived responsibility on the part of the Harvard community to maintain a sense of optimism during difficult times; however, due to the small sample size, weak correlation, and lack of detail in Wikipedia’s summary necessitates that further research is conducted."),
                                             h3(tags$b("Text Analysis")),
-                                            p("Each speech was analyzed for key phrases using", 
+                                            p("Each speech was then analyzed for key phrases using", 
                                               a("Text Analytics’",
                                                 href = "https://azure.microsoft.com/en-ca/services/cognitive-services/text-analytics/"), 
                                               "key phrase extraction API. The API used natural language processing to identify and evaluate approximately 200 key words and phrases in each transcript."),
@@ -74,7 +74,12 @@ ui <- navbarPage(
                                             p("We took the common key phrases from above and checked to see their interest over time for the year they were mentioned in the speech. We then took the average of these values and plotted them below:"),
                                             # image
                                             p("On average, the interest over time of phrases mentioned in the commencement speeches had a minimum value of about 56 and a maximum value of about 69. In other words, the topics said in these speeches were in some ways relevant to events occurring around the world. This makes sense, seeing as how these speeches are in a way, the formal greeting into the “real world” after college. It would only be fair to recap on important events that happened throughout the year as a guiding place for graduates to feel prepared at entering an entirely new environment."),
-                                            p("There are some limits of using an unofficial API as Google themselves did not create it. Furthermore, we had to remove years prior to 2006, as the scope of data available in Google Trends was limited and did not accurately reflect major events of these years.")
+                                            p("There are some limits of using an unofficial API as Google themselves did not create it. Furthermore, we had to remove years prior to 2006, as the scope of data available in Google Trends was limited and did not accurately reflect major events of these years."),
+                                            h3(tags$b("Unanswered Questions")),
+                                            p("There are some questions left unanswered by our work because of the limitations of the resources we used. For example, the sentiment analysis software we used interpreted the presence of any words related to global problems as negative, even when it would be clear to a human reader that although the topic is negative, it is actually being presented in a hopeful manner. A more accurate or nuanced interpretation of the overall sentiment of each speech would therefore rely on more sophisticated software. With such software, it could be interesting to analyze the presence of different sentiments within the same speech to see if any patterns emerge, but this was beyond the scope of our research."),
+                                            p("The slight negative correlation between the negativity of the speech and of the year that we found is also an ambiguous result that leads to further unanswered questions. The first question would be whether or not such a slight trend is actually relevant, and to answer this, it would be necessary to analyze more commencement speech data. The second question would be the reason for such a negative trend, if it exists. Although we might speculate that a slight negative trend might be representative of an urge to remain optimistic even during difficult times, ultimately this is just a prediction. The slight negative trend might also be indicative of something else entirely, and ultimately it would be necessary to conduct more research before drawing any definitive conclusions."),
+                                            br(),
+                                            br()
                  ))
              )
     ),
@@ -86,8 +91,7 @@ ui <- navbarPage(
                  fluidRow(column(1), column(10,
                                             br(),
                                             br(),
-                                            h3(tags$b("Unanswered Questions")),
-                                            h3(tags$b("Conclusions")),
+                                            h3(tags$b("Conclusion")),
                                             h3(tags$b("Significance")),
                                             h3(tags$b("Future Work"))
                  ))
@@ -121,17 +125,6 @@ ui <- navbarPage(
                  )),
                  fluidRow(column(3), column(9,
                                             fluidRow(
-                                                column(5, imageOutput("katherine")),
-                                                column(5, offset = 0, 
-                                                       h4(tags$b("Katherine McPhie")), br(), 
-                                                       p("Hi, I'm Katherine! I'm a first-year undergraduate at Harvard pursuing a concentration in Computer Science. On campus I am involved in Harvard Computer Society, Women in Computer Science, and Harvard Open Data Project. I also sing alto for University Choir, and  play trumpet in the Wind Ensemble! You can reach me at",
-                                                         a("katherinemcphie@college.harvard.edu",
-                                                           href="mailto:katherinemcphie@college.harvard.edu?Subject=Commencement%20Speeches%20Project"
-                                                         ),
-                                                         ".")),
-                                            ),
-                                            br(),
-                                            fluidRow(
                                                 column(5, imageOutput("justin")),
                                                 column(5, offset = 0, 
                                                        h4(tags$b("Justin Ye")), br(), 
@@ -160,6 +153,17 @@ ui <- navbarPage(
                                                        p("You can reach me at",
                                                          a("____@college.harvard.edu",
                                                            href="mailto:____@college.harvard.edu?Subject=Commencement%20Speeches%20Project"
+                                                         ),
+                                                         ".")),
+                                            ),
+                                            br(),
+                                            fluidRow(
+                                                column(5, imageOutput("katherine")),
+                                                column(5, offset = 0, 
+                                                       h4(tags$b("Katherine McPhie")), br(), 
+                                                       p("Hi, I'm Katherine! I'm a first-year undergraduate at Harvard pursuing a concentration in Computer Science. On campus I am involved in Harvard Computer Society, Women in Computer Science, and Harvard Open Data Project. I also sing alto for University Choir, and  play trumpet in the Wind Ensemble! You can reach me at",
+                                                         a("katherinemcphie@college.harvard.edu",
+                                                           href="mailto:katherinemcphie@college.harvard.edu?Subject=Commencement%20Speeches%20Project"
                                                          ),
                                                          ".")),
                                             ),
