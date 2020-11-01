@@ -223,7 +223,7 @@ fig2.update_layout(title="Sentiment Scores per Year From Wikipedia",
                 legend={'title':{'text':'Sentiment'}},
                 template=theme_hodp)
 
-# fig2.show()
+fig2.show()
 
 pprint(wiki_data)
 
@@ -231,15 +231,15 @@ dataframe = []
 for i in range(len(data)):
     dataframe.append(data[i] + wiki_data[i])
 
-df = pd.DataFrame(dataframe, columns =['Years', 'Pos', 'Neutral', 'Neg', 'Wiki-Sentiment', 'Wiki-Pos', 'Wiki-Neutral', 'Wiki-Neg']) 
+df = pd.DataFrame(dataframe, columns =['Years', 'Pos', 'Neutral', 'Negative Sentiment in Speech', 'Wiki-Sentiment', 'Wiki-Pos', 'Wiki-Neutral', 'Negative Sentiment of Wikipedia Summary']) 
 df = df.drop([0,1,3,6,20])
 print(df) 
 
 
 fig = px.scatter(
     df,
-    y='Neg',
-    x='Wiki-Neg',
+    y='Negative Sentiment in Speech',
+    x='Negative Sentiment of Wikipedia Summary',
     color_discrete_sequence=primary_colors,
     trendline='ols',
     opacity=0.8
