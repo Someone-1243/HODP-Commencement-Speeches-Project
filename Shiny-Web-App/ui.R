@@ -91,9 +91,11 @@ ui <- navbarPage(
                  fluidRow(column(1), column(10,
                                             br(),
                                             br(),
-                                            h3(tags$b("Conclusion")),
-                                            h3(tags$b("Significance")),
-                                            h3(tags$b("Future Work"))
+                                            h3(tags$b("Conclusion and Significance")),
+                                            p("Through our research, our group sought to understand what, if any, correlation existed between Harvard commencement speakers’ words and the situation in the world at large. As the final call to action for Harvard students as they leave the college and go into the larger world, commencement addresses give a unique image of what Harvard believes a graduate’s responsibilities are."),
+                                            p("Harvard’s stated mission is “to educate the citizens and citizen-leaders for our society.” Our data suggest that as part of this mission, Harvard believes that its students and graduates should be aware of what is going on in the world, as this is a necessary prerequisite to effecting real-world change and becoming citizen-leaders in society. From our analysis of how common words and phrases in a given commencement speech mirrored relevant events occurring in the world, we found that commencement speeches did reference world events in a significant way, consistent with Harvard’s larger mission."),
+                                            br(),
+                                            br()
                  ))
              )
     ),
