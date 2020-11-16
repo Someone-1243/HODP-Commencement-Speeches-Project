@@ -9,6 +9,6 @@ Data was collected from commencement speech transcripts from 2000 - 2020, with t
 
 ## Setup
 1. Clone this repo.
-2. Raw data is kept in [Sentiment/Commencement Speeches/Commencement Speeches](https://github.com/Someone-1243/HODP-Commencement-Speeches-Project/tree/master/Sentiment/Commencement%20Speeches/Commencement%20Speeches)
+2. Raw data is kept in [Sentiment/Commencement Speeches/Commencement Speeches](https://github.com/jye-1243/HODP-Commencement-Speeches-Project/tree/master/Sentiment/Commencement%20Speeches/Commencement%20Speeches)
 3. Data analysis for sentiment, keyword, and Google Trends Analysis can be found [here](https://github.com/jye-1243/HODP-Commencement-Speeches-Project/tree/master/Sentiment), [here](https://github.com/jye-1243/HODP-Commencement-Speeches-Project/tree/master/Key%20Phrase%20Data), and [here](https://github.com/jye-1243/HODP-Commencement-Speeches-Project/tree/master/Correlations), respectively. Each folder also contains a script to visualize the data
 4. A Shiny App can be found [here](https://github.com/Someone-1243/HODP-Commencement-Speeches-Project/tree/master/Shiny-Web-App). 
