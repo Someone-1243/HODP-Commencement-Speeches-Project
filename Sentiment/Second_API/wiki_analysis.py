@@ -11,7 +11,7 @@ url = "https://japerk-text-processing.p.rapidapi.com/sentiment/"
 
 headers = {
     'content-type': "application/x-www-form-urlencoded; charset=utf-8",
-    'x-rapidapi-key': "26c6528ad6mshea36b2df94b4ab9p1a8fe5jsn750c57e0ead4",
+    #'x-rapidapi-key': "",
     'x-rapidapi-host': "japerk-text-processing.p.rapidapi.com"
     }
 
