@@ -14,11 +14,7 @@ file_end = ".csv"
 
 headers = {
     'content-type': "application/x-www-form-urlencoded; charset=utf-8",
-<<<<<<< HEAD
     # 'x-rapidapi-key': "",
-=======
-    'x-rapidapi-key': "26c6528ad6mshea36b2df94b4ab9p1a8fe5jsn750c57e0ead4",
->>>>>>> a1d90fcc653c00fc7273b33d94bba13cc7a2edea
     'x-rapidapi-host': "japerk-text-processing.p.rapidapi.com"
     }
 
