@@ -232,7 +232,7 @@ for i in range(len(data)):
     dataframe.append(data[i] + wiki_data[i])
 
 df = pd.DataFrame(dataframe, columns =['Years', 'Pos', 'Neutral', 'Negative Sentiment in Speech', 'Wiki-Sentiment', 'Wiki-Pos', 'Wiki-Neutral', 'Negative Sentiment of Wikipedia Summary']) 
-df = df.drop([0,1,3,6,20])
+df = df.drop([0,1,3,6])
 print(df) 
 
 
