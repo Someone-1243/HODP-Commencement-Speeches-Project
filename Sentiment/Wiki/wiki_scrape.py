@@ -6,11 +6,11 @@ import csv
 import helper
 import os
 
-subscription_key = ""
-endpoint = ""
+subscription_key = "a529a57e42a443cd8a80f02b69f88ca5"
+endpoint = "https://hodp.cognitiveservices.azure.com/"
 sentiment_url = endpoint + "/text/analytics/v3.0/sentiment"
 
-driver = webdriver.Chrome()
+driver = webdriver.Chrome('C:\Download\chromedriver_win32\chromedriver.exe')
 
 page = requests.get("https://en.wikipedia.org/wiki/Timeline_of_the_21st_century#2001")
 
@@ -18,7 +18,7 @@ soup = BeautifulSoup(page.text,'html.parser')
 lists = soup.find_all('ul')
 
 years = []
-for list in lists[8:27]:
+for list in lists[8:29]:
     package = ""
     for item in list:
         remove = False
@@ -56,7 +56,7 @@ for index in range(len(text)):
     pprint(sentiments)
     sentiments_list.append(sentiments)
 
-with open ('wiki_sentiments.csv', 'w', newline ='', encoding="utf8", errors='ignore') as csvfile:
+with open ('wiki_sentiments2.csv', 'w', newline ='', encoding="utf8", errors='ignore') as csvfile:
     writer = csv.writer(csvfile)
     counter = 0
     year = 2001
