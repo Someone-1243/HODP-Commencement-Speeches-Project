@@ -2,8 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\Sentiment",
+<<<<<<< HEAD
     "\\Sentiment\\Second_API"
   ],
   "SelectedNode": "\\Sentiment\\Second_API\\sentiment_analysis.py",
+=======
+    "\\Sentiment\\Second_API",
+    "\\Sentiment\\Wiki"
+  ],
+  "SelectedNode": "\\Sentiment\\Second_API\\wiki_analysis.py",
+>>>>>>> a1d90fcc653c00fc7273b33d94bba13cc7a2edea
   "PreviewInSolutionExplorer": false
 }

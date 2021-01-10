@@ -110,7 +110,11 @@ fig.add_trace(go.Bar(
     marker_color=primary_colors[0],
 ))
 
+<<<<<<< HEAD
 fig.update_layout(title="Sentiment Scores for Harvard Commencement Speeches<br>(Word-Processing API)", 
+=======
+fig.update_layout(title="Sentiment Scores for Harvard Commencement Speeches (Word-Processing)", 
+>>>>>>> a1d90fcc653c00fc7273b33d94bba13cc7a2edea
                 xaxis={'title':{'text':'Year'}}, 
                 yaxis={'title':{'text':'Sentiment Distribution'}}, 
                 legend={'title':{'text':'Sentiment'}},
@@ -166,7 +170,11 @@ fig2.add_trace(go.Bar(
     marker_color=primary_colors[0],
 ))
 
+<<<<<<< HEAD
 fig2.update_layout(title="Sentiment Scores per Year From Wikipedia<br>(Word-Processing API)", 
+=======
+fig2.update_layout(title="Sentiment Scores per Year From Wikipedia", 
+>>>>>>> a1d90fcc653c00fc7273b33d94bba13cc7a2edea
                 xaxis={'title':{'text':'Year'}}, 
                 yaxis={'title':{'text':'Sentiment Distribution'}}, 
                 legend={'title':{'text':'Sentiment'}},
@@ -180,7 +188,11 @@ dataframe = []
 for i in range(len(data)):
     dataframe.append(data[i] + wiki_data[i])
 
+<<<<<<< HEAD
 df = pd.DataFrame(dataframe, columns =['Years', 'Positive Sentiment in Speech', 'Neutral', 'Negative Sentiment in Speech', 'Wiki-Sentiment', 'Wiki-Pos', 'Wiki-Neutral', 'Negative Sentiment of Wikipedia Summary']) 
+=======
+df = pd.DataFrame(dataframe, columns =['Years', 'Pos', 'Neutral', 'Negative Sentiment in Speech', 'Wiki-Sentiment', 'Wiki-Pos', 'Wiki-Neutral', 'Negative Sentiment of Wikipedia Summary']) 
+>>>>>>> a1d90fcc653c00fc7273b33d94bba13cc7a2edea
 df = df.drop([0,1,3,6])
 print(df) 
 
@@ -195,8 +207,31 @@ fig3 = px.scatter(
 )
 
 fig3.update_layout(
+<<<<<<< HEAD
     title="Negative Speech Sentiment vs. Negative Year Summary Sentiment <br>(Word-Processing API)", 
+=======
+    title="Speech Sentiment vs. Year Summary Sentiment", 
+>>>>>>> a1d90fcc653c00fc7273b33d94bba13cc7a2edea
     template=theme_hodp
 )
 
 fig3.show()
+<<<<<<< HEAD
+=======
+
+fig4 = px.scatter(
+    df,
+    y='Positive Sentiment in Speech',
+    x='Positive Sentiment of Wikipedia Summary',
+    color_discrete_sequence=primary_colors,
+    trendline='ols',
+    opacity=0.8
+)
+
+fig4.update_layout(
+    title="Speech Sentiment vs. Year Summary Sentiment", 
+    template=theme_hodp
+)
+
+fig4.show()
+>>>>>>> a1d90fcc653c00fc7273b33d94bba13cc7a2edea

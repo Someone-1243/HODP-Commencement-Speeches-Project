@@ -6,8 +6,13 @@ import csv
 import helper
 import os
 
+<<<<<<< HEAD
 #subscription_key = ""
 #endpoint = ""
+=======
+subscription_key = "a529a57e42a443cd8a80f02b69f88ca5"
+endpoint = "https://hodp.cognitiveservices.azure.com/"
+>>>>>>> a1d90fcc653c00fc7273b33d94bba13cc7a2edea
 sentiment_url = endpoint + "/text/analytics/v3.0/sentiment"
 
 driver = webdriver.Chrome('C:\Download\chromedriver_win32\chromedriver.exe')
