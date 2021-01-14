@@ -2,7 +2,8 @@ import csv
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
-reader = csv.reader(open('namesDFtoCSV', 'r',newline='\n'))
+# reader = csv.reader(open('namesDFtoCSV', 'r',newline='\n'))
+reader = csv.reader(open('Key Phrase Data/wordcloud/wordcloud_data.csv', 'r',newline='\n'))
 d = {}
 for k,v in reader:
     d[k] = int(v)
